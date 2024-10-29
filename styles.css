@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 18px;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background-image: url(assets/images/bg.jpg);
+	background-size: cover;
+	min-height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+
+h1 {
+	font-size: 60px;
+	background: linear-gradient(to left, #833ab4, #fd1d1d, #fcb045);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	margin-top: 20px;
+	text-align: center;
+}
+
+
+#input-box {
+	border: none;
+	width: 80%;
+	height: 50px;
+	box-shadow: 10px 5px 20px #b4b4b5;
+	border-radius: 4px;
+	background-color: #ffffff;
+	padding-left: 10px;
+	margin-top: 30px;
+}
+
+
+.todo-app {
+	width: 100%;
+	max-width: 540px;
+	background-color: rgba(253, 253, 254, 0.8);
+	margin: 100px auto;
+	padding: 40px 30px 70px;
+	border-radius: 20px;
+	text-align: center;
+}
+
+button {
+	border: none;
+	outline: none;
+	padding: 14px 18px;
+	background-color: #031a6d;
+	color: white;
+	cursor: pointer;
+	border-radius: 4px;
+	margin-top: 5px;
+}
+
+button:hover {
+	background-color: #da2303;
+}
+
+
+ul li {
+	list-style: none;
+	padding: 12px 10px 12px 50px;
+	user-select: none;
+	margin-top: 20px;
+	cursor: pointer;
+	position: relative;
+	color: #272727;
+}
+
+ul li::before {
+	content: '';
+	position: absolute;
+	height: 24px;
+	width: 24px;
+	background-image: url('https://cdn.glitch.global/1bddedb7-2c18-44aa-8f75-bfca1819a987/icons8-circle-24.png?v=1688760869005');
+	top: 17px;
+	left: 8px;
+}
+
+.checked {
+	text-decoration: line-through;
+}
+
+.checked::before {
+	background-image: url('https://cdn.glitch.global/1bddedb7-2c18-44aa-8f75-bfca1819a987/icons8-checked-24.png?v=1688760860105');
+}
+
+span {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+}
+
+span:hover {
+	background-color: #edeef0;
+}
+
+@media all and (max-width: 768px) {
+	* {
+		font-size: 16px;
+	}
+
+	h1 {
+		font-size: 34px;
+		margin-bottom: 20px;
+	}
+
+	button {
+		padding: 14px 16px;
+
+	}
+
+	ul li {
+		padding: 10px 8px 10px 40px;
+	}
+
+	ul li::before {
+		top: 12px;
+	}
+}
